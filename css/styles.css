@@ -1,0 +1,390 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-size: 16px;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* reset */
+
+/* Typografy */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+@font-face {
+  font-family: "Plank";
+  src: url("../assets/fonts/PLANK.TTF") format("woff");
+}
+
+/* screens */
+.startGame {
+  background-image: url(../assets/img/background-start.png);
+  background-position: center;
+  background-size: 120%;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 1;
+  animation: animatedBackgroundStart 80s ease-in-out infinite;
+}
+
+.game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-image: url(../assets/img/background-game.png);
+  background-position: center;
+  background-size: 120%;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: none;
+  z-index: 2;
+  cursor: url("../assets/img/target.png"), auto;
+  animation: animatedBackground 6s ease-in-out infinite;
+}
+
+.endGame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-image: url(../assets/img/background-start.png);
+  background-position: center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: none;
+  z-index: 3;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.logoStart {
+  width: 100%;
+  max-width: 700px;
+  align-self: center;
+  margin-bottom: 50px;
+  margin: 20px 20px 40px 20px;
+  filter: drop-shadow(0 0 10px #000000);
+}
+
+.logoGame {
+  width: 20%;
+}
+
+.gameButton {
+  position: absolute;
+  bottom: 40px;
+  height: 40px;
+  border-radius: 8px;
+  max-width: 200px;
+  background-image: linear-gradient(#fad961, #f76b1c);
+  font-size: 1rem;
+  border: 0;
+  align-self: center;
+  transition: all 1s;
+  padding: 0 20px;
+  cursor: pointer;
+  min-width: 250px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.gameButton:hover {
+  height: 40px;
+  border-radius: 8px;
+  max-width: 200px;
+  background-image: linear-gradient(#fad961, #fad961);
+  font-size: 1rem;
+  border: 0;
+  align-self: center;
+  transition: all 1s;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+}
+
+.text {
+  width: 200px;
+  font-family: "open sans";
+  font-size: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.number {
+  font-family: "plank";
+  font-size: 4rem;
+  color: #f8e71c;
+  filter: drop-shadow(0 0 10px #000000);
+}
+
+.containerDronesGame {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.containerDronesGame img {
+  height: 100%;
+  max-height: 200px;
+  min-height: 50px;
+  margin: 20px;
+  filter: drop-shadow(0 0 10px #000000);
+}
+
+.logoFinalGame {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.headerFinal {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+}
+
+.finalGame {
+  display: flex;
+  height: 30vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.finalScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 0 20px 20px 0;
+}
+
+.lastScores {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50vw;
+}
+
+.titleFinalScore {
+  text-align: left;
+  width: 200px;
+  font-family: "open sans";
+  font-size: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0px 0 0 0;
+}
+
+.numberFinalScore {
+  font-family: "plank";
+  font-size: 4rem;
+  color: #f8e71c;
+  filter: drop-shadow(0 0 10px #000000);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 70px 30px 30px;
+  border-radius: 20px 0 0 20px;
+}
+
+.numberYourFinalScore {
+  font-family: "plank";
+  font-size: 8rem;
+  color: #f8e71c;
+  filter: drop-shadow(0 0 10px #000000);
+  border-radius: 10px;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes animatedBackgroundStart {
+  0% {
+    background-position: 0 10%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 10%;
+  }
+}
+
+.droneFloat1 {
+  animation: float 2s ease-in-out infinite;
+}
+
+.droneFloat2 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.droneFloat3 {
+  animation: float 4s ease-in-out infinite;
+}

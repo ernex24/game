@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attack of the drones</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+    <section class="startGame">
+        <div class="container">
+            <img class="logoStart" src="assets/img/logo.svg">
+            <button class="gameButton" id="startButton">Start Shooting Now!</button>
+        </div>
+    </section>
+
+    <section class="game">
+        <div class="container">
+            <header>
+                <span class="text">Time <br><span class="number" id="time">60</span></span>
+                <img class="logoGame" src="assets/img/logo.svg">
+                <span class="text">Score <br><span class="number" id="score">0</span></span>
+            </header>
+            <div class="containerDronesGame">
+                <span class="droneFloat1">
+                    <img class="die" src="assets/img/bad-box.png">
+                </span>
+                <span class="droneFloat2">
+                        <img class="die" src="assets/img/bad-box.png">
+                </span>
+                <span class="droneFloat3">
+                        <img class="die" src="assets/img/good-box.png">
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="endGame">
+        <div class="container">
+            <header class="headerFinal">
+                <img class="logoFinalGame" src="assets/img/logo.svg">
+            </header>
+            <div class="finalGame">
+                <div class="finalScore">
+                    <span class="titleFinalScore">Your Final Score</span><br>
+                    <span class="numberYourFinalScore" id="score22">0</span>
+                </div>
+                <div class="lastScores">
+                    <span class="titleFinalScore">Last 5 Scores</span><br>
+                    <ul class="numberFinalScore">
+                        <li id="score1"></li>
+                        <li id="score2"></li>
+                        <li id="score3"></li>
+                        <li id="score4"></li>
+                        <li id="score5"></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="gameButton" id="playAgain">Play Again</button>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
