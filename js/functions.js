@@ -13,14 +13,14 @@ $(function() {
     }
   });
 
-// Change the dron image on click
+  // Change the dron image on click
   var dice = $(".die")
     .map(function() {
       return $(this).attr("src");
     })
     .get();
 
-// Use a random image
+  // put a random image on click
   $(".die").click(function() {
     var num = Math.floor(Math.random() * dice.length);
     $(this).attr("src", dice[num]);
@@ -38,27 +38,33 @@ $(function() {
         return;
       } else {
         $("#time").text(counter);
-        console.log("Timer --> " + counter);
       }
     }, 1000);
 
- // End the game screen
+    // End the game time screen
     setTimeout(function() {
+
+      var score = $("#score").html();
+      $("#finalScore").append(score);
+
+     
+      function scoreTable() {
+        scoreList.push(score);
+        console.log(scoreList);
+      }
+
+      scoreTable();
       $(".endGame").addClass("active");
       $(".game").removeClass("active");
     }, 10000);
   });
 
-   // Play again
+  var scoreList = [];
+
+  // Play again
   $("#playAgain").on("click", function() {
-    pushToTable();
     $(".endGame").removeClass("active");
   });
 
-  function pushToTable() {
-    var userScore = $("#score").text();
-    var scoresTable = [];
-    scoresTable.push(userScore);
-    console.log(scoresTable);
-  }
+ 
 });
