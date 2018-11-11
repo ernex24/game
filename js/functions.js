@@ -33,9 +33,9 @@ $(function() {
       var pic1 = $("#change-box1").attr("src");
       if (pic1 === "assets/img/bad-box.png") {
         $("#score").html(function(i, val) {
-          return val * 1 - 5;
+          return val * 1 - 1;
         });
-        $("#less5-1").html("-5");
+        $("#less5-1").html("-1");
         $("#loose").trigger("play");
         setTimeout(function() {
           $("#less5-1").html(" ");
@@ -45,9 +45,9 @@ $(function() {
       var pic2 = $("#change-box2").attr("src");
       if (pic2 === "assets/img/bad-box.png") {
         $("#score").html(function(i, val) {
-          return val * 1 - 5;
+          return val * 1 - 1;
         });
-        $("#less5-2").html("-5");
+        $("#less5-2").html("-1");
         setTimeout(function() {
           $("#less5-2").html(" ");
           $("#loose").trigger("play");
@@ -56,9 +56,9 @@ $(function() {
       var pic3 = $("#change-box3").attr("src");
       if (pic3 === "assets/img/bad-box.png") {
         $("#score").html(function(i, val) {
-          return val * 1 - 5;
+          return val * 1 - 1;
         });
-        $("#less5-3").html("-5");
+        $("#less5-3").html("-1");
         setTimeout(function() {
           $("#less5-3").html(" ");
           $("#loose").trigger("play");
@@ -136,7 +136,7 @@ $(function() {
               Counter: $(this).text()
             },
             {
-              duration: 1000,
+              duration: 4000,
               easing: "swing",
               step: function(now) {
                 $(this).text(Math.ceil(now));
@@ -160,9 +160,9 @@ $(function() {
   var i = 0;
   // On click I ckeck what src image I have
   $("#change-box1").click(function() {
-    // If the name contains "bad" word I add 5 points in the #score
+   
     if (this.src.indexOf("bad") != -1) {
-      $("#add5-1").html("+5");
+      $("#add5-1").html("+1");
       $(".numberScore").addClass("succed");
       $("#change-box1").addClass("hitted");
       $("#win").trigger("play");
@@ -173,8 +173,8 @@ $(function() {
       }, 300);
 
       $("#score").html(function(i, val) {
-        return val * 1 + 5;
-      }); // If the name contains "good" word I substract 5 points in the #score
+        return val * 1 + 1;
+      });
     } else if (this.src.indexOf("good") != -1) {
       $("#less5-1").html("-5");
       $(".numberScore").addClass("danger");
@@ -193,9 +193,9 @@ $(function() {
   });
 
   $("#change-box2").click(function() {
-    // If the name contains "bad" word I add 5 points in the #score
+   
     if (this.src.indexOf("bad") != -1) {
-      $("#add5-2").html("+5");
+      $("#add5-2").html("+1");
       $(".numberScore").addClass("succed");
       $("#change-box2").addClass("hitted");
       $("#win").trigger("play");
@@ -206,8 +206,8 @@ $(function() {
       }, 300);
 
       $("#score").html(function(i, val) {
-        return val * 1 + 5;
-      }); // If the name contains "good" word I substract 5 points in the #score
+        return val * 1 + 1;
+      }); 
     } else if (this.src.indexOf("good") != -1) {
       $("#less5-2").html("-5");
       $(".numberScore").addClass("danger");
@@ -226,9 +226,9 @@ $(function() {
   });
 
   $("#change-box3").click(function() {
-    // If the name contains "bad" word I add 5 points in the #score
+   
     if (this.src.indexOf("bad") != -1) {
-      $("#add5-3").html("+5");
+      $("#add5-3").html("+1");
       $(".numberScore").addClass("succed");
       $("#change-box3").addClass("hitted");
       $("#win").trigger("play");
@@ -239,7 +239,7 @@ $(function() {
       }, 300);
 
       $("#score").html(function(i, val) {
-        return val * 1 + 5;
+        return val * 1 + 1;
       }); // If the name contains "good" word I substract 5 points in the #score
     } else if (this.src.indexOf("good") != -1) {
       $("#less5-3").html("-5");
