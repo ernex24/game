@@ -30,7 +30,7 @@ This is a shooting game
 
 - Has a “play again” button
 
-You can dowload the files here, only open the index.html or see it live in www.ernesto-perez.com/game
+You can dowload the files here, only open the index.html or see it live in https://ernex24.github.io/game/
 
 I made a visual design prototype, here could be finded:
 https://projects.invisionapp.com/share/H3P1WIQDMTS#/screens/330645347
