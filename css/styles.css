@@ -1,131 +1,45 @@
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   font-size: 16px;
   line-height: 1;
 }
-ol,
-ul {
+
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+
+blockquote, q {
   quotes: none;
 }
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
+
+blockquote:after, blockquote:before {
   content: "";
   content: none;
 }
+
+q:after, q:before {
+  content: "";
+  content: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* reset */
-
-/* Typografy */
-
+/* Variables */
 @font-face {
   font-family: "Plank";
   src: url("../assets/fonts/PLANK.TTF") format("woff");
@@ -146,8 +60,8 @@ table {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .preloader img {
@@ -169,10 +83,14 @@ table {
   background-size: cover;
   min-width: 100vw;
   min-height: 100vh;
-
   -webkit-animation: animatedBackgroundStart 80s ease-in-out infinite;
-
   animation: animatedBackgroundStart 80s ease-in-out infinite;
+}
+
+.headphones {
+  position: asolute;
+  top: 0;
+  right: 0;
 }
 
 .game {
@@ -248,7 +166,7 @@ table {
   -ms-flex-align: center;
   align-items: center;
   color: #ffffff;
-  border-radius: 77px;
+  border-radius: 50px;
   justify-self: center;
   margin: 0 0 100px 0;
 }
@@ -267,7 +185,8 @@ table {
   width: 100%;
   max-width: 600px;
   -ms-flex-item-align: center;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   margin: 0 0 50px 0;
   -webkit-filter: drop-shadow(0 0 10px #000000);
   filter: drop-shadow(0 0 10px #000000);
@@ -300,7 +219,7 @@ table {
 .gameButtonFinish {
   position: absolute;
   border: 0;
-  background-color: gold;
+  background-color: #FFD700;
   color: #000000;
   border-radius: 20px;
   height: 45px;
@@ -367,7 +286,7 @@ header {
 }
 
 .number {
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 4rem;
   color: #ffffff;
   -webkit-filter: drop-shadow(0 0 10px #000000);
@@ -376,7 +295,7 @@ header {
 }
 
 .numberScore {
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 4rem;
   color: #ffffff;
   -webkit-filter: drop-shadow(0 0 10px #000000);
@@ -390,7 +309,7 @@ header {
   position: absolute;
   top: -51px;
   left: 100px;
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 4rem;
   color: #f82e1c;
   -webkit-filter: drop-shadow(0 0 10px #000000);
@@ -401,9 +320,9 @@ header {
   position: absolute;
   top: -51px;
   left: 100px;
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 4rem;
-  color: gold;
+  color: #FFD700;
   -webkit-filter: drop-shadow(0 0 10px #000000);
   filter: drop-shadow(0 0 10px #000000);
 }
@@ -436,6 +355,7 @@ header {
   justify-content: center;
   margin: 30px;
 }
+
 .headerFinal {
   width: 100vw;
   display: -webkit-box;
@@ -518,7 +438,7 @@ header {
 
 #maxScore {
   font-size: 100px;
-  color: gold;
+  color: #FFD700;
   margin-bottom: 30px;
 }
 
@@ -527,7 +447,7 @@ header {
   transform: scale(1.5);
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  color: gold;
+  color: #FFD700;
 }
 
 .danger {
@@ -551,7 +471,7 @@ header {
 }
 
 .numberFinalScore {
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 4rem;
   color: #ffffff;
   -webkit-filter: drop-shadow(0 0 10px #000000);
@@ -602,7 +522,7 @@ header {
 }
 
 .numberYourFinalScore {
-  font-family: "plank";
+  font-family: "Plank";
   font-size: 200px;
   color: #ffffff;
   -webkit-filter: drop-shadow(0 0 10px #000000);
@@ -788,33 +708,20 @@ header {
 }
 
 @media (max-width: 1024px) {
-  .startGame {
+  .startGame, .game, .endGame {
     display: none !important;
   }
-  .game {
-    display: none !important;
-  }
-  .endGame {
-    display: none !important;
-  }
-
   .minScreen {
     display: block;
   }
 }
 
 @media (max-height: 600px) {
-  .startGame {
+  .startGame, .game, .endGame {
     display: none !important;
   }
-  .game {
-    display: none !important;
-  }
-  .endGame {
-    display: none !important;
-  }
-
   .minScreen {
     display: block;
   }
 }
+/*# sourceMappingURL=styles2.css.map */

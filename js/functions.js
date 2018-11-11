@@ -310,6 +310,7 @@ $(function() {
 
   $("#playAgain").on("click", function() {
     $("#audioGame").trigger("pause");
+    $("#audioGame").prop("currentTime", 0);
   });
 
   $("#audioGame").prop("volume", 0.1);
