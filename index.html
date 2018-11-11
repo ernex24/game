@@ -1,72 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Attack of the drones</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Poor+Story" rel="stylesheet">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
 
-<body>
-
-    <section class="startGame">
+  <body>
+     
+    <div id="pagepiling">
+      <section class="section startGame">
         <div class="container">
-            <img class="logoStart" src="assets/img/logo.svg">
-            <button class="gameButton" id="startButton">Start Shooting Now!</button>
-        </div>
-    </section>
-
-    <section class="game">
-        <div class="container">
-            <header>
-                <span class="text">Time <br><span class="number" id="time">60</span></span>
-                <img class="logoGame" src="assets/img/logo.svg">
-                <span class="text">Score <br><span class="number" id="score">0</span></span>
-            </header>
-            <div class="containerDronesGame">
-                <span class="droneFloat1">
-                    <img class="die" src="assets/img/bad-box.png">
-                </span>
-                <span class="droneFloat2">
-                        <img class="die" src="assets/img/bad-box.png">
-                </span>
-                <span class="droneFloat3">
-                        <img class="die" src="assets/img/good-box.png">
-                </span>
+          <div class="opacityContainer">
+            <img class="logoStart" src="assets/img/logo.svg" />
+            <span class="comments">
+            <img src="assets/img/person.png">
+            <span class="phoneGuy" id="typed"></span>
+            </span>  
+            <div class="gameButton" id="startButton">
+              <img src="assets/img/button.svg">
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="endGame">
+      <section class="section game">
         <div class="container">
-            <header class="headerFinal">
-                <img class="logoFinalGame" src="assets/img/logo.svg">
-            </header>
-            <div class="finalGame">
-                <div class="finalScore">
-                    <span class="titleFinalScore">Your Final Score</span><br>
-                    <span class="numberYourFinalScore" id="finalScore">0</span>
-                </div>
-                <div class="lastScores">
-                    <span class="titleFinalScore">Last 5 Scores</span><br>
-                    <ul class="numberFinalScore">
-                        <li id="score1"></li>
-                        <li id="score2"></li>
-                        <li id="score3"></li>
-                        <li id="score4"></li>
-                        <li id="score5"></li>
-                    </ul>
-                </div>
-            </div>
-            <button class="gameButton" id="playAgain">Play Again</button>
+          <header>
+            <span class="text">Time<span class="number" id="time">60</span></span>
+            <img class="logoGame" src="assets/img/logo.svg" />
+            <span class="text"><span class="numberScore" id="score">0</span> Score</span>
+          </header>
+          <div class="containerDronesGame">
+            <span class="droneFloat1">
+            <span class="numberRed" id="less5-1">  </span>
+            <span class="numberYellow" id="add5-1">  </span>
+              <img class="die" id="change-box1" src="assets/img/good-box.png" />
+            </span>
+            <span class="droneFloat2">
+            <span class="numberRed" id="less5-2"> </span>
+            <span class="numberYellow" id="add5-2">  </span>
+              <img class="die" id="change-box2" src="assets/img/bad-box.png" />
+            </span>
+            <span class="droneFloat3" >
+            <span class="numberRed" id="less5-3"> </span>
+            <span class="numberYellow" id="add5-3">  </span>
+              <img class="die" id="change-box3" src="assets/img/good-box.png" />
+            </span>
+          </div>
+          <span class="messageGame">
+                <img src="assets/img/person.png">
+                <span class="phoneGuy">You need to shoot the damaged boxes </br> they change every 3 seconds if you dont hit them you loose 5pts</span>
+              </span>
         </div>
-    </section>
+      </section>
 
+      <section class="section endGame">
+        <div class="container">
+          <header class="headerFinal">
+            <img class="logoFinalGame" src="assets/img/logo.svg" />
+          </header>
+          <div class="finalGame">
+            <div class="finalScore">
+              <span class="titleFinalScore">Your Final Score</span><br />
+              <span class="numberYourFinalScore" id="finalScore"></span>
+              <span class="message">
+                <img src="assets/img/person.png">
+                <span class="phoneGuy" id="resultMessage"></span>
+              </span>
+            </div>
+            <div class="lastScores">
+              <ul class="numberFinalScore">
+                <li class="titleFinalScore">Your Best Score</li>
+                <li id="maxScore"></li>
+                <li class="titleFinalScore">Your Last 5 Scores</li>
+                <li id="score1"></li>
+                <li id="score2"></li>
+                <li id="score3"></li>
+                <li id="score4"></li>
+                <li id="score5"></li>
+              </ul>
+            </div>
+          </div>
+          <button class="gameButtonFinish" id="playAgain">Play Again</button>
+        </div>
+      </section>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/functions.js"></script>
-</body>
+    <div class="minScreen">
+      <div class="containerMinScreen">
+          <img src="assets/img/logo.svg" />
+        <p class="minumun">
+         The min screen size is 1024 x 768
+        </p>
+      </div>
+    </div>
 
+    <audio id="audioGame" preload="auto"> 
+        <source  src="assets/audio/bensound-dance.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="win" preload="auto"> 
+        <source  src="assets/audio/win.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="loose" preload="auto"> 
+        <source  src="assets/audio/loose.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="timesound" preload="auto"> 
+        <source  src="assets/audio/time.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="scorecount" preload="auto"> 
+        <source  src="assets/audio/scorecount.mp3" type="audio/mpeg">
+     </audio>
+
+     <div class="preloader">
+       <img src="assets/img/preloader.svg">
+     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/functions.min.js"></script>
+    <script src="js/jquery.pagepiling.min.js"></script>
+    <script src="js/typed.js"></script>
+  </body>
 </html>

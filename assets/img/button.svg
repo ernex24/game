@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220px" height="92px" viewBox="0 0 220 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-609.000000, -709.000000)">
+            <g id="Group" transform="translate(611.000000, 711.000000)">
+                <path d="M75.2249925,13 L188.5,13 C204.7924,13 218,26.2075999 218,42.5 C218,58.7924001 204.7924,72 188.5,72 L77.9427031,72 C69.8723699,81.7720267 57.6634955,88 44,88 C19.699471,88 0,68.300529 0,44 C0,19.699471 19.699471,0 44,0 C56.2074858,0 67.2538473,4.97136399 75.2249925,13 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.5"></path>
+                <polygon id="Triangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(50.000000, 44.000000) rotate(90.000000) translate(-50.000000, -44.000000) " points="50 23 71 65 29 65"></polygon>
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="4" fill-rule="nonzero" cx="44" cy="44" r="44"></circle>
+                <text id="start" font-family="DolceVita, Dolce Vita" font-size="30" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="109.344238" y="54">start</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
