@@ -297,7 +297,7 @@ $(function() {
     typeSpeed: 50,
     // Waits 1000ms after typing
     strings: [
-      "Hi, ^1000 is John ^1000 today some drones went crazy and they are damaging the boxes,^1000 you need to stop them... ^1000 shoot the drones with the damaged boxes. You have 60 seconds!!! "
+      "Hi, ^1000 is John ^1000 today some drones went crazy and they are damaging the boxes,^1000 shoot the drones with the damaged boxes. You have 60 seconds!!! "
     ]
   });
 

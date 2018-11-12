@@ -707,6 +707,27 @@ header {
   margin: 20px 20px 20px 20px;
 }
 
+.headphones {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headphones img {
+  height: 50px;
+  width: 50px;
+}
+
 @media (max-width: 1024px) {
   .startGame, .game, .endGame {
     display: none !important;
@@ -724,4 +745,4 @@ header {
     display: block;
   }
 }
-/*# sourceMappingURL=styles2.css.map */
+/*# sourceMappingURL=styles.css.map */
