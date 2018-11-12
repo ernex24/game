@@ -160,7 +160,6 @@ $(function() {
   var i = 0;
   // On click I ckeck what src image I have
   $("#change-box1").click(function() {
-   
     if (this.src.indexOf("bad") != -1) {
       $("#add5-1").html("+1");
       $(".numberScore").addClass("succed");
@@ -193,7 +192,6 @@ $(function() {
   });
 
   $("#change-box2").click(function() {
-   
     if (this.src.indexOf("bad") != -1) {
       $("#add5-2").html("+1");
       $(".numberScore").addClass("succed");
@@ -207,7 +205,7 @@ $(function() {
 
       $("#score").html(function(i, val) {
         return val * 1 + 1;
-      }); 
+      });
     } else if (this.src.indexOf("good") != -1) {
       $("#less5-2").html("-5");
       $(".numberScore").addClass("danger");
@@ -226,7 +224,6 @@ $(function() {
   });
 
   $("#change-box3").click(function() {
-   
     if (this.src.indexOf("bad") != -1) {
       $("#add5-3").html("+1");
       $(".numberScore").addClass("succed");
@@ -300,7 +297,7 @@ $(function() {
     typeSpeed: 50,
     // Waits 1000ms after typing
     strings: [
-      "Hi, ^1000 is John ^1000 today the drones went crazy and they are damaging the boxes,^1000 you need to stop them... ^1000 SHOOT NOW!!! "
+      "Hi, ^1000 is John ^1000 today some drones went crazy and they are damaging the boxes,^1000 you need to stop them... ^1000 shoot the drones with the damaged boxes. You have 60 seconds!!! "
     ]
   });
 
