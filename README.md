@@ -1,5 +1,6 @@
 Shoot the damage box game
-This is a shooting game
+
+
 
 The time of gameplay is 1 minute.
 
